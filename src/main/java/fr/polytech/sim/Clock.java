@@ -7,6 +7,7 @@ import java.util.Random;
  */
 public class Clock {
     private final int time = new Random().nextInt(25);
+    private static Clock instance;
     private Clock(){}
 
     /**
@@ -17,6 +18,9 @@ public class Clock {
     }
 
     public static Clock getInstance(){
-        return new Clock();
+        if(instance == null) {
+            instance = new Clock();
+        }
+        return instance;
     }
 }

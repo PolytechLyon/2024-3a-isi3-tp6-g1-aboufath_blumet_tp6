@@ -17,6 +17,27 @@ composants identiques)
 ## Exercices 3
 
 ## Exercices 4
+1. Les classes de Bike et de Wheel font partie de différents packages. La classe de Bike est incluse dans le package fr.polytech.sim.cycling,
+tandis que la classe de Wheel est incluse dans le package fr.polytech.sim.transport.  
+Il existe une association bidirectionnelle entre les classes de Bike et de Wheel.
+La classe Bike fait référence à Wheel, et chaque Wheel fait référence à la Bike à laquelle il appartient.
+Il est nécessaire car le Wheel doit accéder à la méthode getPush() de la classe Bike afin de calculer sa vitesse.
+
+L'association bidirectionnelle n'est pas généralement considèrer comme une bonne pratique dans la POO car elle crée une étroite connexion entre
+les classes et peut entraîner des problèmes de maintenance et de flexibilité. Il y a également une dépendance circulaire qui peut engendrer des problèmes dans certaines situations.
+
+2. La classe Wheel utilises la methode getPush() de la classe Bike pour calculer sa vitesse.
+Il n'y a pas une abstraction une abstraction de la classe Bike, car la classe Wheel utilise directement la classe Bike pour calculer sa vitesse.
+
+3. Pour resoudre le problème de dépendance circulaire entre les classes Bike et Wheel, il est possible de créer une interface qui encapsule la méthode getPush().
+La classe Bike peut implémenter cette interface, et la classe Wheel peut alors dépendre de cette interface au lieu de la classe Bike directement.
+Solution proposée :
+![img.png](images/img.png)
+Dans cette solution, l'interface IBike est introduite afin d'encapsular la méthode getPush().
+Cette interface est utilisée par la classe Bike, tandis que la classe Wheel dépend désormais de l'interface IBike plutôt que de la classe Bike directement.
+Cela rompt la dépendance circulaire entre les catégories de Bike et de Wheel.
+
+
 
 ## Exercices 5
 
