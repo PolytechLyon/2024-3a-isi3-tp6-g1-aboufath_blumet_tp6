@@ -13,7 +13,7 @@ public class TimestampedLoggerDecorator implements Logger{
     public void log(String format, Object... args){
          DateFormat date = new SimpleDateFormat("hh:mm:ss a");
          String time = date.format(new Date());
-         logger.log("At "+time+" |"+format, args);
+         logger.log("At "+time+" |"+format, args); //affichage du message avec l'horaire
      }
 
 }

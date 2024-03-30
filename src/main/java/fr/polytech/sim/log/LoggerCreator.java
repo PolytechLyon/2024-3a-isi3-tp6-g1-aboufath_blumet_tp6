@@ -9,7 +9,7 @@ public class LoggerCreator {
 
     }
     public static void useLog(String name,String format, Object... args){
-        Logger logger = createLogger(name);
+        Logger logger = createLogger(name);//création du logger pouvant être un Console ou un File
         logger.log(format,args);
     }
 }
