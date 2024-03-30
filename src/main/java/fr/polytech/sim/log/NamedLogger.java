@@ -28,6 +28,6 @@ public abstract class NamedLogger implements Logger {
         showMessage(message);
     }
 
-    protected abstract void showMessage(String message);
+    public abstract void showMessage(String message);
 
 }

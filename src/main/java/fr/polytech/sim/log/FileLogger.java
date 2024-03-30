@@ -19,7 +19,7 @@ public class FileLogger extends NamedLogger {
     }
 
     @Override
-    synchronized protected void showMessage(String message) {
+    public void showMessage(String message) {
         try (FileWriter fileWriter = new FileWriter(FILE_NAME, true)) {
             fileWriter.write(message);
         } catch (IOException e) {

@@ -4,7 +4,7 @@ Noms des étudiants du binôme : BLUMET Thomas ABOUFATH Ibtissam
 
 ## Exercice 1
 Il s'agit du pattern "composite", où `MobileObject` joue le rôle de classe composant et `Vehicle` le rôle de classe composite.
-Pour la nouvelle classe il n'y a aps besoin de réécrire les 2 méthodes (l'héritage de `Vehicle` suffit), car les 2 méthodes utilisent 
+Pour la nouvelle classe il n'y a pas besoin de réécrire les 2 méthodes (l'héritage de `Vehicle` suffit), car les 2 méthodes utilisent 
 soit un itérateur sur les composants, soit un flux de composants.
 
 ## Exercice 2
@@ -73,5 +73,8 @@ Dans la classe de ce décorateur on trouve :
 à l'appel de la méthode log() par l'instance passé en argument du constructeur du décorateur de la façon suivante: logger.log(format+"|"+time, args);
 
 ## Exercice 8
+Par rapport à ServiceLoader, la classe `Context` suit le patron de conception Iterator.
+On peut avoir plusieurs ligne dans le fichier, chacune correspondra à une instance à créer.
 
-
+## Exercice 9
+La méthode propose le patron de méthode Itérator pour parcourir les éléments.

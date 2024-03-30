@@ -36,6 +36,10 @@ public class Context {
      */
     public static <T> Iterator<T> injectAll(Class<T> klass) {
         /* TODO: implement the right logic */
-        throw new UnsupportedOperationException("Method not implemented");
+        Iterator<T> iterator = ServiceLoader.load(klass).iterator();
+        if(!iterator.hasNext()){
+            throw new UnsupportedOperationException("Method not implemented");
+        }
+        return iterator;
     }
 }

@@ -15,7 +15,7 @@ public class ConsoleLogger extends NamedLogger {
     }
 
     @Override
-    protected void showMessage(String message) {
+    public void showMessage(String message) {
         System.out.print(message);
     }
 }
