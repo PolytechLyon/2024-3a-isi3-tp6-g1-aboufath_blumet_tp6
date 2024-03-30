@@ -61,10 +61,10 @@ cad pouvant être un `FileLogger` ou un `ConsoleLogger`(qui sont les classes de 
 
 Les différences entre le patron Singleton et la méthode Fabrique: 
     
-   | Différences |                             Singleton                                  |                            Fabrique                         |
-    |----------|---------------------------------------------------------------------------|--------------------------------------------------------------|
+   | Différences |                                 Singleton                                  | Fabrique                                                   |
+    |----------|----------------------------------------------------------------------------|------------------------------------------------------------|
     | Objectif | assure la création et l'utilisation d'une seule et même instance de classe | création d'objet en ne connaissant pas à l'avance leur type |
-    | Instance | une seule et même instance de classe| création de plusieurs instances selon le type voulu |
+    | Instance |                    une seule et même instance de classe                    | création de plusieurs instances selon le type voulu        |    
 
 ## Exercice 7
 Dans la classe de ce décorateur on trouve :
