@@ -74,8 +74,14 @@ Dans la classe de ce décorateur on trouve :
 à l'appel de la méthode log() par l'instance passé en argument du constructeur du décorateur de la façon suivante: logger.log("At "+time+" |"+format, args);
 
 ## Exercice 8
-Par rapport à ServiceLoader, la classe `Context` suit le patron de conception Iterator.
-On peut avoir plusieurs ligne dans le fichier, chacune correspondra à une instance à créer.
+1. La classe Context suit le patron de conception Facade par rapport à l'outil ServiceLoader, car elle fournit une interface simple pour les classes de haut niveau pour interagir avec les classes de bas niveau.
+   Dans ce cas, la classe Context simplifie l'utilisation de ServiceLoader.
+
+2. Pour injecter un objet de type Bike dans la simulation, on peut utiliser la classe Context comme ceci : **Bike bike = Context.inject(Bike.class);**
+
+3. Oui, on peut utiliser plusieurs lignes dans le fichier **fr.polytech.sim.cycling.Bik**.
+   Chaque ligne de ce fichier Correspond à une implementation differente de l'interface Bike qu'on souhaite rendre disponible pour l'injection.
 
 ## Exercice 9
-La méthode propose le patron de méthode Itérator pour parcourir les éléments.
+1. La methode injectAll() renvoie un Iterator, ce qui indique l'utilisation du patron Iterator.
+   Le patron Iterator permet de parcourir les éléments d'une collection sans exposer la structure interne de la collection.
