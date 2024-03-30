@@ -41,6 +41,7 @@ qui encapsule la méthode getPush().
 La classe Bike peut implémenter cette interface, et la classe Wheel peut alors dépendre de cette interface au lieu de la classe Bike directement.
 Solution proposée :
 ![img.png](images/img.png)
+
 Dans cette solution, l'interface IBike est introduite afin d'encapsular la méthode getPush().
 Cette interface est utilisée par la classe Bike, tandis que la classe Wheel dépend désormais de l'interface IBike (via son attribut **drive**
 qui est désormais de type IBike) plutôt que de la classe Bike directement.
@@ -60,17 +61,17 @@ cad pouvant être un `FileLogger` ou un `ConsoleLogger`(qui sont les classes de 
 **useLog(String name,String format, Object... args)** afin d'appeler la méthode **log()** propre au type de Logger instancié;
 
 Les différences entre le patron Singleton et la méthode Fabrique: 
-    
-   | Différences |                                 Singleton                                  | Fabrique                                                   |
-    |----------|----------------------------------------------------------------------------|------------------------------------------------------------|
-    | Objectif | assure la création et l'utilisation d'une seule et même instance de classe | création d'objet en ne connaissant pas à l'avance leur type |
-    | Instance |                    une seule et même instance de classe                    | création de plusieurs instances selon le type voulu        |    
+
+| Différences |  Singleton                                                                 | Fabrique                                                   |
+|-------------|----------------------------------------------------------------------------|------------------------------------------------------------|
+| Objectif    | assure la création et l'utilisation d'une seule et même instance de classe | création d'objet en ne connaissant pas à l'avance leur type|
+| Instance    | une seule et même instance de classe                                       | création de plusieurs instances selon le type voulu        |    
 
 ## Exercice 7
 Dans la classe de ce décorateur on trouve :
 - un constructeur prenant en argument un objet de type Logger
 - la méthode **log()** de Logger où est défini un DateFormat permettant d'obtenir l'heure actuelle (time) est qui est ajouté
-à l'appel de la méthode log() par l'instance passé en argument du constructeur du décorateur de la façon suivante: logger.log(format+"|"+time, args);
+à l'appel de la méthode log() par l'instance passé en argument du constructeur du décorateur de la façon suivante: logger.log("At "+time+" |"+format, args);
 
 ## Exercice 8
 Par rapport à ServiceLoader, la classe `Context` suit le patron de conception Iterator.
